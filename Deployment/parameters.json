@@ -1,30 +1,30 @@
 {
   "subscriptionId": {
-    "Value": "<<value>>",
+    "Value": "a3b0c54d-1c82-4d22-8df6-9079665a3751",
     "Description": "Azure Subscription ID. All resources in an Azure subscription are billed together."
   },
   "subscriptionTenantId": {
-    "Value": "<<value>>",
+    "Value": "8ddefbd4-db7c-439a-a3dd-88c66c64ec9e",
     "Description": "Id of the tenant to deploy to (If you are not sure how to get Tenant ID, please check Azure Active Directory in Azure Portal. Under Manage, click Properties. The tenant ID is shown in the Directory ID box). e.g 98f3ece2-3a5a-428b-aa4f-4c41b3f6eef0. Tenant ID is also in the \"Overview\" section\""
   },
   "resourceGroupName": {
-    "Value": "<<value>>",
+    "Value": "IceBreakerRG ",
     "Description": "Resource Group"
   },
   "location": {
-    "Value": "<<value>>",
+    "Value": "eastus",
     "Description": "The Azure region that's right for you and your customers. Not every resource is available in every region."
   },
   "baseResourceName": {
-    "Value": "<<value>>",
+    "Value": "sesac-icebreaker",
     "Description": "The base name to use for the resources that will be provisioned."
   },
   "tenantId": {
-    "Value": "<<value>>",
+    "Value": "8ddefbd4-db7c-439a-a3dd-88c66c64ec9e",
     "Description": "Tenant Id where the teams application will be installed. If the Azure subscription is in the same tenant, update with \"subscriptionTenantId\" parameter value."
   },
   "pairingWeekInterval": {
-    "Value": "1",
+    "Value": "4",
     "Description": "The number of weeks between pairings."
   },
   "pairingDayOfWeek": {
@@ -68,7 +68,7 @@
     "Description": "The app (and bot) display name."
   },
   "appDescription": {
-    "Value": "Icebreaker is a cute little bot that randomly pairs team members up every week to help the team build trust and personal connections.",
+    "Value": "Icebreaker is a bot that randomly pairs team members up to help the team build trust and personal connections.",
     "Description": "The app (and bot) description."
   },
   "appIconUrl": {
@@ -76,19 +76,19 @@
     "Description": "The link to the icon for the app. It must resolve to a PNG file."
   },
   "companyName": {
-    "Value": "<<value>>",
+    "Value": "SESAC",
     "Description": "The display name for the company."
   },
   "websiteUrl": {
-    "Value": "<<value>>",
+    "Value": "https://www.sesac.com",
     "Description": "The https:// URL to the company's website. This link should take users to your company or product-specific landing page."
   },
   "privacyUrl": {
-    "Value": "<<value>>",
+    "Value": "https://www.sesac.com/privacy",
     "Description": "The https:// URL to the company's privacy policy."
   },
   "termsOfUseUrl": {
-    "Value": "<<value>>",
+    "Value": "https://www.sesac.com/terms-of-service",
     "Description": "The https:// URL to the company's terms of use."
   }
 }
