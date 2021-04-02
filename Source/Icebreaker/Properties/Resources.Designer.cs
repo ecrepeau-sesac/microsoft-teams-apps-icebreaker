@@ -115,7 +115,7 @@ namespace Icebreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I get to help you meet more people around your organization by randomly pairing you with someone new every week. You get to make more friends and learn about the people you work with. It&apos;s a win-win-*win* situation..
+        ///   Looks up a localized string similar to I get to help you meet more people around your organization by randomly pairing you with someone new every month. You get to make more friends and learn about the people you work with. It&apos;s a win-win-*win* situation..
         /// </summary>
         public static string InstallMessageKnownInstallerPart2 {
             get {
@@ -142,7 +142,7 @@ namespace Icebreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to I get to help you meet more people around your organization by randomly pairing you with someone new every week. You get to make more friends and learn about the people you work with. It&apos;s a win-win-*win* situation..
+        ///   Looks up a localized string similar to I get to help you meet more people around your organization by randomly pairing you with someone new every month. You get to make more friends and learn about the people you work with. It&apos;s a win-win-*win* situation..
         /// </summary>
         public static string InstallMessageUnknownInstallerPart2 {
             get {
