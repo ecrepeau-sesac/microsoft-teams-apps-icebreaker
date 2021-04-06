@@ -162,7 +162,7 @@
     <comment>Part 3 of the install message when the name of the installer is not known</comment>
   </data>
   <data name="MatchUpCardContentPart1" xml:space="preserve">
-    <value>Hi there again, I'm {0} in {1}. A bot that pairs you with a new coworker to meet each week. This week your match is {2}.</value>
+    <value>Hi there again, I'm {0} in {1}. A bot that pairs you with a new coworker to meet each month. This month your match is {2}.</value>
     <comment>First part of the match up card main content</comment>
   </data>
   <data name="MatchUpCardContentPart2" xml:space="preserve">
@@ -178,7 +178,7 @@
     <comment>The title text for the pairup notification adaptive card</comment>
   </data>
   <data name="MeetupContent" xml:space="preserve">
-    <value>Hey there, looks like we've been matched by {0} this week. It'd be great to meet up for a coffee or a lunch or a call if you've got time.</value>
+    <value>Hey there, looks like we've been matched by {0} this month. It'd be great to meet up for a coffee or a lunch or a call if you've got time.</value>
     <comment>Content of the Meetup for the propose meeting</comment>
   </data>
   <data name="MeetupTitle" xml:space="preserve">
@@ -222,7 +222,7 @@
     <comment>This is the tour content page title text</comment>
   </data>
   <data name="TourMatchesBodyText" xml:space="preserve">
-    <value>Pause matches whenever you need. Too busy that week? Out of the office? No problem. Just click the button at anytime.</value>
+    <value>Pause matches whenever you need. Too busy that month? Out of the office? No problem. Just click the button at anytime.</value>
     <comment>This is the tour match task module body text</comment>
   </data>
   <data name="TourMatchesHeaderText" xml:space="preserve">
@@ -230,7 +230,7 @@
     <comment>This is the tour match task module header text</comment>
   </data>
   <data name="TourWelcomeBodyText" xml:space="preserve">
-    <value>Every week, I'll pair you with someone new. If you have the inclination that week, you can meet up--grab a lunch, or a call if you're in different locations. Look out for another message in which I'll pair you with your first match.</value>
+    <value>Every month, I'll pair you with someone new. If you have the inclination, you can meet up--grab a lunch, or a call if you're in different locations. Look out for another message in which I'll pair you with your first match.</value>
     <comment>This is the tour welcome body text</comment>
   </data>
   <data name="TourWelcomeHeaderText" xml:space="preserve">

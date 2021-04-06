@@ -160,7 +160,7 @@ namespace Icebreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hi there again, I&apos;m {0} in {1}. A bot that pairs you with a new coworker to meet each week. This week your match is {2}..
+        ///   Looks up a localized string similar to Hi there again, I&apos;m {0} in {1}. A bot that pairs you with a new coworker to meet each month. This month your match is {2}..
         /// </summary>
         public static string MatchUpCardContentPart1 {
             get {
@@ -196,7 +196,7 @@ namespace Icebreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hey there, looks like we&apos;ve been matched by {0} this week. It&apos;d be great to meet up for a coffee or a lunch or a call if you&apos;ve got time..
+        ///   Looks up a localized string similar to Hey there, looks like we&apos;ve been matched by {0} this month. It&apos;d be great to meet up for a coffee or a lunch or a call if you&apos;ve got time..
         /// </summary>
         public static string MeetupContent {
             get {
@@ -295,7 +295,7 @@ namespace Icebreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pause matches whenever you need. Too busy that week? Out of the office? No problem. Just click the button at anytime..
+        ///   Looks up a localized string similar to Pause matches whenever you need. Too busy that month? Out of the office? No problem. Just click the button at anytime..
         /// </summary>
         public static string TourMatchesBodyText {
             get {
@@ -313,7 +313,7 @@ namespace Icebreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Every week, I&apos;ll pair you with someone new. If you have the inclination that week, you can meet up--grab a lunch, or a call if you&apos;re in different locations. Look out for another message in which I&apos;ll pair you with your first match..
+        ///   Looks up a localized string similar to Every month, I&apos;ll pair you with someone new. If you have the inclination, you can meet up--grab a lunch, or a call if you&apos;re in different locations. Look out for another message in which I&apos;ll pair you with your first match..
         /// </summary>
         public static string TourWelcomeBodyText {
             get {

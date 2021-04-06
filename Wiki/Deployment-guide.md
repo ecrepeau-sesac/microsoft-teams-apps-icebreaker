@@ -70,7 +70,7 @@ Here is a video walk-through of the manual deployment, if you'd like to follow a
     - `gitRepoUrl` - The URL to the GitHub repository to deploy. Default value: [https://github.com/OfficeDev/microsoft-teams-apps-icebreaker.git](https://github.com/OfficeDev/microsoft-teams-apps-icebreaker.git)
     - `gitBranch` - The branch of the GitHub repository to deploy. Default value: main
     - `appDisplayName` - The app (and bot) display name. Default value: Icebreaker.
-    - `appDescription` - The app (and bot) description. Default value: Icebreaker is a cute little bot that randomly pairs team members up every week to help the team build trust and personal connections.
+    - `appDescription` - The app (and bot) description. Default value: Icebreaker is a bot that randomly pairs team members up every month to help the team build trust and personal connections.
     - `appIconUrl` - The link to the icon for the app. It must resolve to a PNG file. Default value [https://raw.githubusercontent.com/OfficeDev/microsoft-teams-apps-icebreaker/main/Manifest/color.png](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-apps-icebreaker/main/Manifest/color.png)
 
     - `companyName` - The display name for the company.
