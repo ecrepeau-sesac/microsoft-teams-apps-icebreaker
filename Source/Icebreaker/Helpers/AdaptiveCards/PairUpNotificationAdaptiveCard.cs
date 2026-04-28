@@ -1,4 +1,4 @@
-﻿// <copyright file="PairUpNotificationAdaptiveCard.cs" company="Microsoft">
+// <copyright file="PairUpNotificationAdaptiveCard.cs" company="Microsoft">
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 // </copyright>
@@ -14,13 +14,10 @@ namespace Icebreaker.Helpers.AdaptiveCards
     using Microsoft.Bot.Schema.Teams;
 
     /// <summary>
-    /// Builder class for the pairup notification card
+    /// Builder class for the pairup notification card.
     /// </summary>
     public class PairUpNotificationAdaptiveCard : AdaptiveCardBase
     {
-        /// <summary>
-        /// Default marker string in the UPN that indicates a user is externally-authenticated
-        /// </summary>
         private const string ExternallyAuthenticatedUpnMarker = "#ext#";
 
         private static readonly Lazy<AdaptiveCardTemplate> AdaptiveCardTemplate =
@@ -30,20 +27,18 @@ namespace Icebreaker.Helpers.AdaptiveCards
         /// Creates the pairup notification card.
         /// </summary>
         /// <param name="teamName">The team name.</param>
-        /// <param name="sender">The user who will be sending this card.</param>
-        /// <param name="recipient">The user who will be receiving this card.</param>
+        /// <param name="sender">The user receiving this card (they see the recipient as their match).</param>
+        /// <param name="recipient">The user who is the match.</param>
         /// <param name="botDisplayName">The bot display name.</param>
-        /// <returns>Pairup notification card</returns>
-        public static Attachment GetCard(string teamName, TeamsChannelAccount sender, TeamsChannelAccount recipient, string botDisplayName)
+        /// <param name="currentFrequency">The sender's current pairing frequency (used to highlight active button).</param>
+        /// <returns>Pairup notification card attachment.</returns>
+        public static Attachment GetCard(string teamName, TeamsChannelAccount sender, TeamsChannelAccount recipient, string botDisplayName, PairingFrequency currentFrequency = PairingFrequency.Weekly)
         {
-            // Set alignment of text based on default locale.
             var textAlignment = CultureInfo.CurrentCulture.TextInfo.IsRightToLeft ? AdaptiveHorizontalAlignment.Right.ToString() : AdaptiveHorizontalAlignment.Left.ToString();
 
-            // Guest users may not have their given name specified in AAD, so fall back to the full name if needed
             var senderGivenName = string.IsNullOrEmpty(sender.GivenName) ? sender.Name : sender.GivenName;
             var recipientGivenName = string.IsNullOrEmpty(recipient.GivenName) ? recipient.Name : recipient.GivenName;
 
-            // To start a chat with a guest user, use their external email, not the UPN
             var recipientUpn = !IsGuestUser(recipient) ? recipient.UserPrincipalName : recipient.Email;
 
             var meetingTitle = string.Format(Resources.MeetupTitle, senderGivenName, recipientGivenName);
@@ -63,16 +58,18 @@ namespace Icebreaker.Helpers.AdaptiveCards
                 personUpn = recipientUpn,
                 meetingLink,
                 textAlignment,
+                changeFrequencyLabel = Resources.ChangeFrequencyButtonText,
+                frequencyWeeklyButtonText = Resources.FrequencyWeeklyButtonText,
+                frequencyBiweeklyButtonText = Resources.FrequencyBiweeklyButtonText,
+                frequencyMonthlyButtonText = Resources.FrequencyMonthlyButtonText,
+                frequencyWeeklyStyle = currentFrequency == PairingFrequency.Weekly ? "positive" : "default",
+                frequencyBiweeklyStyle = currentFrequency == PairingFrequency.Biweekly ? "positive" : "default",
+                frequencyMonthlyStyle = currentFrequency == PairingFrequency.Monthly ? "positive" : "default",
             };
 
             return GetCard(AdaptiveCardTemplate.Value, cardData);
         }
 
-        /// <summary>
-        /// Checks whether or not the account is a guest user.
-        /// </summary>
-        /// <param name="account">The <see cref="TeamsChannelAccount"/> user to check.</param>
-        /// <returns>True if the account is a guest user, false otherwise.</returns>
         private static bool IsGuestUser(TeamsChannelAccount account)
         {
             return account.UserPrincipalName.IndexOf(ExternallyAuthenticatedUpnMarker, StringComparison.InvariantCultureIgnoreCase) >= 0;

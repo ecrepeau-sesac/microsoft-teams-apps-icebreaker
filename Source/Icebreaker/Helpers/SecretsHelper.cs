@@ -6,10 +6,10 @@
 namespace Icebreaker.Helpers
 {
     using System;
+    using System.Configuration;
     using Azure.Identity;
     using Azure.Security.KeyVault.Secrets;
     using Icebreaker.Interfaces;
-    using Microsoft.Azure;
 
     /// <summary>
     /// Used to fetch secrets from reliable sources
@@ -57,9 +57,9 @@ namespace Icebreaker.Helpers
             }
             else
             {
-                microsoftAppPassword = CloudConfigurationManager.GetSetting(nameof(this.MicrosoftAppPassword));
-                key = CloudConfigurationManager.GetSetting(nameof(this.Key));
-                cosmosDBKey = CloudConfigurationManager.GetSetting(nameof(this.CosmosDBKey));
+                microsoftAppPassword = ConfigurationManager.AppSettings[nameof(this.MicrosoftAppPassword)];
+                key = ConfigurationManager.AppSettings[nameof(this.Key)];
+                cosmosDBKey = ConfigurationManager.AppSettings[nameof(this.CosmosDBKey)];
             }
 
             this.Key = key;

@@ -249,4 +249,60 @@
     <value>Tour</value>
     <comment>This is the title of the tour for the Icebreaker Bot</comment>
   </data>
+  <data name="FeedbackCardTitle" xml:space="preserve">
+    <value>Did you meet up with {0}?</value>
+    <comment>Title of the post-meetup feedback card - {0} is the name of the match</comment>
+  </data>
+  <data name="FeedbackCardBody" xml:space="preserve">
+    <value>Let me know how it went! Your feedback helps improve future matches.</value>
+    <comment>Body text of the post-meetup feedback card</comment>
+  </data>
+  <data name="FeedbackYesButtonText" xml:space="preserve">
+    <value>Yes, we met! 🎉</value>
+    <comment>Button text for confirming the meetup happened</comment>
+  </data>
+  <data name="FeedbackNoButtonText" xml:space="preserve">
+    <value>Not yet</value>
+    <comment>Button text for indicating the meetup has not happened yet</comment>
+  </data>
+  <data name="FeedbackYesConfirmation" xml:space="preserve">
+    <value>That's awesome! Thanks for connecting — hope it was a great chat. 🎉</value>
+    <comment>Reply sent after user confirms they met their match</comment>
+  </data>
+  <data name="FeedbackNoConfirmation" xml:space="preserve">
+    <value>No worries! Hope you get a chance to connect soon. I'll keep you in the mix for next time.</value>
+    <comment>Reply sent after user says they haven't met their match yet</comment>
+  </data>
+  <data name="FrequencyWeeklyButtonText" xml:space="preserve">
+    <value>Weekly</value>
+    <comment>Button text to set pairing frequency to weekly</comment>
+  </data>
+  <data name="FrequencyBiweeklyButtonText" xml:space="preserve">
+    <value>Every 2 weeks</value>
+    <comment>Button text to set pairing frequency to bi-weekly</comment>
+  </data>
+  <data name="FrequencyMonthlyButtonText" xml:space="preserve">
+    <value>Monthly</value>
+    <comment>Button text to set pairing frequency to monthly</comment>
+  </data>
+  <data name="FrequencySetConfirmation" xml:space="preserve">
+    <value>Done! I'll pair you up {0}. You can change this anytime.</value>
+    <comment>Confirmation reply after user sets pairing frequency - {0} is the frequency label</comment>
+  </data>
+  <data name="FrequencyWeeklyLabel" xml:space="preserve">
+    <value>every week</value>
+    <comment>Label used in frequency confirmation message for weekly frequency</comment>
+  </data>
+  <data name="FrequencyBiweeklyLabel" xml:space="preserve">
+    <value>every two weeks</value>
+    <comment>Label used in frequency confirmation message for bi-weekly frequency</comment>
+  </data>
+  <data name="FrequencyMonthlyLabel" xml:space="preserve">
+    <value>once a month</value>
+    <comment>Label used in frequency confirmation message for monthly frequency</comment>
+  </data>
+  <data name="ChangeFrequencyButtonText" xml:space="preserve">
+    <value>Change frequency</value>
+    <comment>Button text on pairup card that lets user change their pairing frequency</comment>
+  </data>
 </root>

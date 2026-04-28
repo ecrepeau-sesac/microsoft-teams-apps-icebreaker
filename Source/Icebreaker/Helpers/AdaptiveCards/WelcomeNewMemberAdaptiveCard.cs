@@ -6,11 +6,11 @@
 namespace Icebreaker.Helpers.AdaptiveCards
 {
     using System;
+    using System.Configuration;
     using System.Globalization;
     using global::AdaptiveCards;
     using global::AdaptiveCards.Templating;
     using Icebreaker.Properties;
-    using Microsoft.Azure;
     using Microsoft.Bot.Schema;
 
     /// <summary>
@@ -51,9 +51,9 @@ namespace Icebreaker.Helpers.AdaptiveCards
                 introMessagePart3 = Resources.InstallMessageKnownInstallerPart3;
             }
 
-            var baseDomain = CloudConfigurationManager.GetSetting("AppBaseDomain");
+            var baseDomain = ConfigurationManager.AppSettings["AppBaseDomain"];
             var tourTitle = Resources.WelcomeTourTitle;
-            var appId = CloudConfigurationManager.GetSetting("ManifestAppId");
+            var appId = ConfigurationManager.AppSettings["ManifestAppId"];
 
             var welcomeData = new
             {
