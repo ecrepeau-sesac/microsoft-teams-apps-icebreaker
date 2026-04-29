@@ -29,5 +29,10 @@ namespace Icebreaker.Helpers
         /// Represents the welcome card sent to team channel once bot is added
         /// </summary>
         WelcomeTeam,
+
+        /// <summary>
+        /// Represents the follow-up feedback card asking if users actually met
+        /// </summary>
+        MeetupFeedback,
     }
 }

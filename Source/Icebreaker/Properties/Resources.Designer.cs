@@ -383,5 +383,131 @@ namespace Icebreaker.Properties {
                 return ResourceManager.GetString("WelcomeTourTitle", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Did you meet up with {0}?.
+        /// </summary>
+        public static string FeedbackCardTitle {
+            get {
+                return ResourceManager.GetString("FeedbackCardTitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Let me know how it went! Your feedback helps improve future matches..
+        /// </summary>
+        public static string FeedbackCardBody {
+            get {
+                return ResourceManager.GetString("FeedbackCardBody", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Yes, we met!.
+        /// </summary>
+        public static string FeedbackYesButtonText {
+            get {
+                return ResourceManager.GetString("FeedbackYesButtonText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Not yet.
+        /// </summary>
+        public static string FeedbackNoButtonText {
+            get {
+                return ResourceManager.GetString("FeedbackNoButtonText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to That's awesome! Thanks for connecting.
+        /// </summary>
+        public static string FeedbackYesConfirmation {
+            get {
+                return ResourceManager.GetString("FeedbackYesConfirmation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to No worries! Hope you get a chance to connect soon..
+        /// </summary>
+        public static string FeedbackNoConfirmation {
+            get {
+                return ResourceManager.GetString("FeedbackNoConfirmation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Weekly.
+        /// </summary>
+        public static string FrequencyWeeklyButtonText {
+            get {
+                return ResourceManager.GetString("FrequencyWeeklyButtonText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Every 2 weeks.
+        /// </summary>
+        public static string FrequencyBiweeklyButtonText {
+            get {
+                return ResourceManager.GetString("FrequencyBiweeklyButtonText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Monthly.
+        /// </summary>
+        public static string FrequencyMonthlyButtonText {
+            get {
+                return ResourceManager.GetString("FrequencyMonthlyButtonText", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Done! I'll pair you up {0}..
+        /// </summary>
+        public static string FrequencySetConfirmation {
+            get {
+                return ResourceManager.GetString("FrequencySetConfirmation", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to every week.
+        /// </summary>
+        public static string FrequencyWeeklyLabel {
+            get {
+                return ResourceManager.GetString("FrequencyWeeklyLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to every two weeks.
+        /// </summary>
+        public static string FrequencyBiweeklyLabel {
+            get {
+                return ResourceManager.GetString("FrequencyBiweeklyLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to once a month.
+        /// </summary>
+        public static string FrequencyMonthlyLabel {
+            get {
+                return ResourceManager.GetString("FrequencyMonthlyLabel", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Change frequency.
+        /// </summary>
+        public static string ChangeFrequencyButtonText {
+            get {
+                return ResourceManager.GetString("ChangeFrequencyButtonText", resourceCulture);
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
-  "version": "1.0.0",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "2.0.0",
   "id": "d55d08d9-bacb-4567-942f-afd85d632dcc",
   "packageName": "com.microsoft.teams.icebreaker",
   "developer": {
@@ -68,11 +68,12 @@
     "outline": "outline.png"
   },
   "name": {
-    "short": "Icebreaker"
+    "short": "Icebreaker",
+    "full": "Icebreaker - Team Connection Bot"
   },
   "description": {
-    "short": "Icebreaker is a bot that randomly pairs team members up to build team unity.",
-    "full": "Icebreaker is a cute little bot that randomly pairs team members up every week to help the team build trust and personal connections."
+    "short": "Randomly pairs team members to build connections.",
+    "full": "Icebreaker randomly pairs team members for casual meetups every week (or at your chosen frequency), helping your team build trust and personal connections at scale. Users can opt in/out, change their pairing frequency, and provide feedback on their meetups."
   },
   "accentColor": "#64A2CC",
   "bots": [
@@ -83,7 +84,34 @@
         "team"
       ],
       "supportsFiles": false,
-      "isNotificationOnly": true
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": ["personal"],
+          "commands": [
+            {
+              "title": "Pause matches",
+              "description": "Pause your weekly pairings"
+            },
+            {
+              "title": "Resume matches",
+              "description": "Resume your weekly pairings"
+            },
+            {
+              "title": "Weekly",
+              "description": "Set pairing frequency to weekly"
+            },
+            {
+              "title": "Every 2 weeks",
+              "description": "Set pairing frequency to bi-weekly"
+            },
+            {
+              "title": "Monthly",
+              "description": "Set pairing frequency to monthly"
+            }
+          ]
+        }
+      ]
     }
   ],
   "permissions": [
@@ -92,5 +120,9 @@
   ],
   "validDomains": [
     "<app domain>"
-  ]
+  ],
+  "webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscBasedStoreApp"
+  }
 }

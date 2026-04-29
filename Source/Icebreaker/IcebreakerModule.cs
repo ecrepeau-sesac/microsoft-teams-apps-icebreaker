@@ -13,9 +13,9 @@ namespace Icebreaker
     using Icebreaker.Helpers;
     using Icebreaker.Interfaces;
     using Icebreaker.Services;
+    using System.Configuration;
     using Microsoft.ApplicationInsights;
     using Microsoft.ApplicationInsights.Extensibility;
-    using Microsoft.Azure;
     using Microsoft.Bot.Builder;
     using Microsoft.Bot.Builder.Integration.AspNet.WebApi;
     using Microsoft.Bot.Connector.Authentication;
@@ -39,18 +39,18 @@ namespace Icebreaker
 
             // ICredentialProvider is required for AD queries
             builder.Register(c => new SimpleCredentialProvider(
-                    CloudConfigurationManager.GetSetting("MicrosoftAppId"),
+                    ConfigurationManager.AppSettings["MicrosoftAppId"],
                     c.Resolve<ISecretsHelper>().MicrosoftAppPassword))
                 .As<ICredentialProvider>()
                 .SingleInstance();
 
             builder.Register(c =>
             {
-                return new TelemetryClient(new TelemetryConfiguration(CloudConfigurationManager.GetSetting("APPINSIGHTS_INSTRUMENTATIONKEY")));
+                return new TelemetryClient(new TelemetryConfiguration(ConfigurationManager.AppSettings["APPINSIGHTS_INSTRUMENTATIONKEY"]));
             }).SingleInstance();
 
             builder.Register(c => new MicrosoftAppCredentials(
-                    CloudConfigurationManager.GetSetting("MicrosoftAppId"),
+                    ConfigurationManager.AppSettings["MicrosoftAppId"],
                     c.Resolve<ISecretsHelper>().MicrosoftAppPassword))
                 .SingleInstance();
 

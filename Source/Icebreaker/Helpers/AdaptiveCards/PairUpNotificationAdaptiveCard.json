@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "AdaptiveCard",
   "body": [
     {
@@ -47,6 +47,60 @@
           "horizontalAlignment": "${textAlignment}"
         }
       ]
+    },
+    {
+      "type": "Container",
+      "separator": true,
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "${changeFrequencyLabel}",
+          "size": "Small",
+          "isSubtle": true,
+          "wrap": true
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "${frequencyWeeklyButtonText}",
+              "style": "${frequencyWeeklyStyle}",
+              "data": {
+                "msteams": {
+                  "type": "messageBack",
+                  "displayText": "${frequencyWeeklyButtonText}",
+                  "text": "frequency_weekly"
+                }
+              }
+            },
+            {
+              "type": "Action.Submit",
+              "title": "${frequencyBiweeklyButtonText}",
+              "style": "${frequencyBiweeklyStyle}",
+              "data": {
+                "msteams": {
+                  "type": "messageBack",
+                  "displayText": "${frequencyBiweeklyButtonText}",
+                  "text": "frequency_biweekly"
+                }
+              }
+            },
+            {
+              "type": "Action.Submit",
+              "title": "${frequencyMonthlyButtonText}",
+              "style": "${frequencyMonthlyStyle}",
+              "data": {
+                "msteams": {
+                  "type": "messageBack",
+                  "displayText": "${frequencyMonthlyButtonText}",
+                  "text": "frequency_monthly"
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "actions": [
@@ -72,5 +126,5 @@
       }
     }
   ],
-  "version": "1.0"
+  "version": "1.2"
 }

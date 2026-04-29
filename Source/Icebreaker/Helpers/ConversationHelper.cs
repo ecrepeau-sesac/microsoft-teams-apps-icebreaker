@@ -9,9 +9,9 @@ namespace Icebreaker.Helpers
     using System.Collections.Generic;
     using System.Threading;
     using System.Threading.Tasks;
+    using System.Configuration;
     using Microsoft.ApplicationInsights;
     using Microsoft.ApplicationInsights.DataContracts;
-    using Microsoft.Azure;
     using Microsoft.Bot.Builder;
     using Microsoft.Bot.Builder.Teams;
     using Microsoft.Bot.Connector.Authentication;
@@ -37,8 +37,8 @@ namespace Icebreaker.Helpers
         {
             this.appCredentials = appCredentials;
             this.telemetryClient = telemetryClient;
-            this.botId = CloudConfigurationManager.GetSetting("MicrosoftAppId");
-            this.isTesting = Convert.ToBoolean(CloudConfigurationManager.GetSetting("Testing"));
+            this.botId = ConfigurationManager.AppSettings["MicrosoftAppId"];
+            this.isTesting = Convert.ToBoolean(ConfigurationManager.AppSettings["Testing"]);
         }
 
         /// <summary>

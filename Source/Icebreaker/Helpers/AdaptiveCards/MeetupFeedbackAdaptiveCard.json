@@ -1,0 +1,54 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "Medium",
+          "weight": "Bolder",
+          "text": "${feedbackCardTitle}",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "${feedbackCardBody}",
+          "wrap": true
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "${feedbackYesButtonText}",
+      "data": {
+        "msteams": {
+          "type": "messageBack",
+          "displayText": "${feedbackYesButtonText}",
+          "text": "feedback_yes",
+          "value": "${pairedWithUserId}"
+        }
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "${feedbackNoButtonText}",
+      "data": {
+        "msteams": {
+          "type": "messageBack",
+          "displayText": "${feedbackNoButtonText}",
+          "text": "feedback_no",
+          "value": "${pairedWithUserId}"
+        }
+      }
+    }
+  ],
+  "version": "1.2"
+}
